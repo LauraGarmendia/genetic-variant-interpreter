@@ -37,3 +37,24 @@ The program will ask whether you want to enter sequences manually or provide FAS
 Run the automated tests with:
 
 pytest
+
+## Example Output
+
+Example reference and experimental coding DNA sequences:
+
+```text
+Reference:    GCTTTGTGG
+Experimental: GCCATGTGA
+```
+
+The program detects the SNPs and classifies their effects:
+
+```text
+--- Summary of found mutations ---
+
+| Position | DNA change | RNA change  | Aminoacid change | Mutation type |
+|----------|------------|-------------|------------------|---------------|
+| 3        | T --> C    | GCU --> GCC | A --> A          | Synonymous    |
+| 4        | T --> A    | UUG --> AUG | L --> M          | Missense      |
+| 9        | G --> A    | UGG --> UGA | W --> STOP       | Nonsense      |
+```
